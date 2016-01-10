@@ -6,7 +6,6 @@
       <class name="com.test.sample.SampleTest">
         <methods>
           <include name="testApp2"/>
-          <include name="setUp"/>
           <include name="testApp"/>
         </methods>
       </class> <!-- com.test.sample.SampleTest -->

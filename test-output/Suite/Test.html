@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>4/4/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Nov 17 02:45:55 IST 2015</td>
+<td>Started on:</td><td>Wed Nov 18 01:28:02 IST 2015</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (182 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (180 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,11 +76,17 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.test.sample.SampleTest.testApp()'><b>testApp</b><br>Test class: com.test.sample.SampleTest</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.test.sample.SampleTest.testApp(SampleTest.java:13)
-... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace192794887", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace192794887'><pre>java.lang.NullPointerException
-	at com.test.sample.SampleTest.testApp(SampleTest.java:13)
+<td><div><pre>java.lang.AssertionError: 
+	at com.test.sample.SampleTest.testApp(SampleTest.java:15)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace605118658", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace605118658'><pre>java.lang.AssertionError: 
+	at org.testng.AssertJUnit.fail(AssertJUnit.java:59)
+	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:24)
+	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:33)
+	at com.test.sample.SampleTest.testApp(SampleTest.java:15)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -91,33 +97,25 @@ function toggleAllBoxes() {
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1176)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1101)
-	at org.testng.TestNG.run(TestNG.java:1009)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
 </pre></div></td>
 <td>0</td>
 <td>[SampleTest passed=0 failed=0 skipped=0]</td></tr>
 <tr>
 <td title='com.test.sample.SampleTest.testApp2()'><b>testApp2</b><br>Test class: com.test.sample.SampleTest</td>
 <td><div><pre>java.lang.AssertionError: 
-	at com.test.sample.SampleTest.testApp2(SampleTest.java:24)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace209833425", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace209833425'><pre>java.lang.AssertionError: 
+	at com.test.sample.SampleTest.testApp2(SampleTest.java:25)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace724767509", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace724767509'><pre>java.lang.AssertionError: 
 	at org.testng.AssertJUnit.fail(AssertJUnit.java:59)
 	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:24)
 	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:33)
-	at com.test.sample.SampleTest.testApp2(SampleTest.java:24)
+	at com.test.sample.SampleTest.testApp2(SampleTest.java:25)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -128,20 +126,9 @@ function toggleAllBoxes() {
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1176)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1101)
-	at org.testng.TestNG.run(TestNG.java:1009)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
 </pre></div></td>
 <td>0</td>
 <td>[SampleTest passed=0 failed=0 skipped=0]</td></tr>
@@ -149,8 +136,11 @@ function toggleAllBoxes() {
 <td title='com.test.sample.Sample2Test.testApp4()'><b>testApp4</b><br>Test class: com.test.sample.Sample2Test</td>
 <td><div><pre>java.lang.AssertionError: 
 	at com.test.sample.Sample2Test.testApp4(Sample2Test.java:13)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2104545713", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2104545713'><pre>java.lang.AssertionError: 
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace315583532", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace315583532'><pre>java.lang.AssertionError: 
 	at org.testng.AssertJUnit.fail(AssertJUnit.java:59)
 	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:24)
 	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:33)
@@ -165,20 +155,9 @@ function toggleAllBoxes() {
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1176)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1101)
-	at org.testng.TestNG.run(TestNG.java:1009)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
 </pre></div></td>
 <td>0</td>
 <td>[Sample2Test passed=0 failed=0 skipped=0]</td></tr>
@@ -186,8 +165,11 @@ function toggleAllBoxes() {
 <td title='com.test.sample.Sample2Test.testApp6()'><b>testApp6</b><br>Test class: com.test.sample.Sample2Test</td>
 <td><div><pre>java.lang.AssertionError: 
 	at com.test.sample.Sample2Test.testApp6(Sample2Test.java:23)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace439904756", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace439904756'><pre>java.lang.AssertionError: 
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1919773297", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1919773297'><pre>java.lang.AssertionError: 
 	at org.testng.AssertJUnit.fail(AssertJUnit.java:59)
 	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:24)
 	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:33)
@@ -202,20 +184,9 @@ function toggleAllBoxes() {
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1142)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1176)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1101)
-	at org.testng.TestNG.run(TestNG.java:1009)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
 </pre></div></td>
 <td>0</td>
 <td>[Sample2Test passed=0 failed=0 skipped=0]</td></tr>

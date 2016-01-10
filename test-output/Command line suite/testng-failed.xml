@@ -5,11 +5,11 @@
     <classes>
       <class name="com.test.sample.SampleTest">
         <methods>
+          <include name="beforeMethod"/>
           <include name="testApp2"/>
           <include name="afterMethod"/>
           <include name="afterSuite"/>
           <include name="testApp"/>
-          <include name="beforeMethod"/>
         </methods>
       </class> <!-- com.test.sample.SampleTest -->
     </classes>
