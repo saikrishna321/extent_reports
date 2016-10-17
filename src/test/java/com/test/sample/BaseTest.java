@@ -1,52 +1,40 @@
 package com.test.sample;
 
-import java.io.PrintWriter;
-import java.io.StringWriter;
 import java.lang.reflect.Method;
 
+import com.aventstack.extentreports.ExtentTest;
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
 
 public class BaseTest extends TestListenerAdapter {
-	public ExtentTest testReporter;
+	private ThreadLocal<ExtentTest> parentTest;
+	private ThreadLocal<ExtentTest> test;
+
+	@BeforeClass
+	public synchronized void beforeClass() {
+		ExtentTest parent = ExtentTestManager.createTest(getClass().getName());
+		parentTest.set(parent);
+	}
 
 	@BeforeMethod
-	public void beforeMethod(Method caller) {
-		ExtentTestManager.startTest(caller.getName(), "This is a simple test.")
-				.assignCategory(Thread.currentThread().getName());
+	public synchronized void beforeMethod(Method method) {
+		ExtentTest child = parentTest.get().createNode(method.getName());
+		test.set(child);
 	}
 
 	@AfterMethod
-	public void afterMethod(ITestResult result) {
-		if (result.isSuccess()) {
-			ExtentTestManager.getTest().log(LogStatus.PASS, "Test passed");
-		} else if (result.getStatus() == ITestResult.FAILURE) {
-			ExtentTestManager.getTest().log(LogStatus.FAIL, "<pre>" + getStackTrace(result.getThrowable()) + "</pre>");
-			System.out.println("******" + result.getThrowable().toString());
+	public synchronized void afterMethod(ITestResult result) {
+		if (result.getStatus() == ITestResult.FAILURE)
+			test.get().fail(result.getThrowable());
+		else if (result.getStatus() == ITestResult.SKIP)
+			test.get().skip(result.getThrowable());
+		else
+			test.get().pass("Test passed");
 
-		} else if (result.getStatus() == ITestResult.SKIP) {
-			ExtentTestManager.getTest().log(LogStatus.SKIP, "Test skipped");
-		}
-
-		ExtentTestManager.endTest();
-		// ExtentManager.getInstance().flush();
-	}
-
-	protected String getStackTrace(Throwable t) {
-		StringWriter sw = new StringWriter();
-		PrintWriter pw = new PrintWriter(sw);
-		t.printStackTrace(pw);
-		return sw.toString();
-	}
-
-	@AfterSuite
-	public void afterSuite() {
-		ExtentManager.getInstance().flush();
+		ExtentManager.getExtent().flush();
 	}
 }

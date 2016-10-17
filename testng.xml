@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="classes">
 	<listeners>
-		<listener class-name="com.test.basetest.BaseTest" />
+		<listener class-name="com.test.sample.BaseTest" />
 	</listeners>
 	<test name="Test">
 		<classes>

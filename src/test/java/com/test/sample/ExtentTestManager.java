@@ -1,32 +1,38 @@
 package com.test.sample;
 
-import java.util.HashMap;
-import java.util.Map;
 
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
+import java.util.Properties;
+
 
 public class ExtentTestManager {  // new
-    static Map<Integer, ExtentTest> extentTestMap = new HashMap<Integer, ExtentTest>();
-    
-    private static ExtentReports extent = ExtentManager.getInstance();
+    public static Properties prop = new Properties();
 
-    public static synchronized ExtentTest getTest() {
-        return extentTestMap.get((int) (long) (Thread.currentThread().getId()));
+    private static ThreadLocal<ExtentTest> extentTest;
+    private static ExtentReports extent = ExtentManager.getExtent();
+
+    public synchronized static ExtentTest getTest() {
+        return extentTest.get();
     }
 
-    public static synchronized void endTest() {
-        extent.endTest(extentTestMap.get((int) (long) (Thread.currentThread().getId())));
+    public synchronized static ExtentTest createTest(String name, String description, String deviceId) {
+        ExtentTest test = extent.createTest(name, description);
+
+        if (deviceId != null && !deviceId.isEmpty())
+            test.assignCategory(deviceId);
+
+        extentTest.set(test);
+
+        return getTest();
     }
 
-    public static synchronized ExtentTest startTest(String testName) {
-        return startTest(testName, "");
+    public synchronized static ExtentTest createTest(String name, String description) {
+        return createTest(name, description, null);
     }
 
-    public static synchronized ExtentTest startTest(String testName, String desc) {
-        ExtentTest test = extent.startTest(testName, desc);
-        extentTestMap.put((int) (long) (Thread.currentThread().getId()), test);
-
-        return test;
+    public synchronized static ExtentTest createTest(String name) {
+        return createTest(name, null);
     }
 }
