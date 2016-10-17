@@ -11,8 +11,8 @@ import org.testng.annotations.BeforeMethod;
 
 
 public class BaseTest extends TestListenerAdapter {
-	private ThreadLocal<ExtentTest> parentTest;
-	private ThreadLocal<ExtentTest> test;
+	public ThreadLocal<ExtentTest> parentTest = new ThreadLocal<ExtentTest>();
+	public ThreadLocal<ExtentTest> test = new ThreadLocal<ExtentTest>();
 
 	@BeforeClass
 	public synchronized void beforeClass() {

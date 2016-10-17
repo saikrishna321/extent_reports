@@ -10,29 +10,28 @@ import java.util.Properties;
 public class ExtentTestManager {  // new
     public static Properties prop = new Properties();
 
-    private static ThreadLocal<ExtentTest> extentTest;
-    private static ExtentReports extent = ExtentManager.getExtent();
+    public static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
+    public static ExtentReports extent = ExtentManager.getExtent();
 
     public synchronized static ExtentTest getTest() {
         return extentTest.get();
     }
 
-    public synchronized static ExtentTest createTest(String name, String description, String deviceId) {
+    public synchronized static ExtentTest createTest(String name, String description,
+        String deviceId) {
         ExtentTest test = extent.createTest(name, description);
 
         if (deviceId != null && !deviceId.isEmpty())
             test.assignCategory(deviceId);
-
-        extentTest.set(test);
-
+            extentTest.set(test);
         return getTest();
     }
 
     public synchronized static ExtentTest createTest(String name, String description) {
-        return createTest(name, description, null);
+        return createTest(name, description, String.valueOf(Thread.currentThread().getId()));
     }
 
     public synchronized static ExtentTest createTest(String name) {
-        return createTest(name, null);
+        return createTest(name, "Sample Test");
     }
 }

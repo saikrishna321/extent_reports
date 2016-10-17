@@ -9,7 +9,7 @@ public class Sample2Test extends BaseTest {
 	public void testApp4(){
 		
 		System.out.println("ThreadName: " + Thread.currentThread().getName() + Thread.currentThread().getStackTrace()[1].getClassName());
-		AssertJUnit.assertTrue(false);
+		AssertJUnit.assertTrue(true);
 		
 	}
 	
@@ -26,7 +26,7 @@ public class Sample2Test extends BaseTest {
 		
 		//AssertJUnit.assertTrue(false);
 		//AssertJUnit.assertEquals(true, false);
-		AssertJUnit.assertEquals("sai", "sa");
+		AssertJUnit.assertEquals("sai", "sai");
 		
 	}
 	
