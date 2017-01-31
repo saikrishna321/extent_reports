@@ -3,7 +3,9 @@ package com.test.sample;
 import java.lang.reflect.Method;
 
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import org.testng.ITestResult;
+import org.testng.SkipException;
 import org.testng.TestListenerAdapter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -15,9 +17,10 @@ public class BaseTest extends TestListenerAdapter {
 	public ThreadLocal<ExtentTest> test = new ThreadLocal<ExtentTest>();
 
 	@BeforeClass
-	public synchronized void beforeClass() {
+	public synchronized void beforeClass() throws Exception {
 		ExtentTest parent = ExtentTestManager.createTest(getClass().getName());
 		parentTest.set(parent);
+		//throw new Exception("Failed ******* ");
 	}
 
 	@BeforeMethod
@@ -29,7 +32,7 @@ public class BaseTest extends TestListenerAdapter {
 	@AfterMethod
 	public synchronized void afterMethod(ITestResult result) {
 		if (result.getStatus() == ITestResult.FAILURE)
-			test.get().fail(result.getThrowable());
+			test.get().log(Status.FAIL,result.getThrowable());
 		else if (result.getStatus() == ITestResult.SKIP)
 			test.get().skip(result.getThrowable());
 		else
