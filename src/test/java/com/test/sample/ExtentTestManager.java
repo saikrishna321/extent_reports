@@ -21,7 +21,7 @@ public class ExtentTestManager {  // new
         String deviceId) {
         ExtentTest test = extent.createTest(name, description);
 
-        if (deviceId != null && !deviceId.isEmpty())
+        if (deviceId != null)
             test.assignCategory(deviceId);
             extentTest.set(test);
         return getTest();

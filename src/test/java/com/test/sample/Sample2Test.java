@@ -2,7 +2,6 @@ package com.test.sample;
 
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
-import org.testng.asserts.Assertion;
 
 public class Sample2Test extends BaseTest {
 	@Test
