@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="classes">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="classes">
   <listeners>
-    <listener class-name="com.test.basetest.BaseTest"/>
+    <listener class-name="com.test.sample.BaseTest"/>
   </listeners>
+  <test name="Test">
+    <classes>
+      <class name="com.test.sample.SampleTest"/>
+      <class name="com.test.sample.Sample2Test"/>
+    </classes>
+  </test> <!-- Test -->
   <test name="Test(failed)" parallel="classes">
     <classes>
       <class name="com.test.sample.SampleTest">
         <methods>
+          <include name="beforeMethod"/>
+          <include name="beforeClass"/>
           <include name="testApp2"/>
           <include name="afterMethod"/>
-          <include name="afterSuite"/>
           <include name="testApp"/>
-          <include name="beforeMethod"/>
         </methods>
       </class> <!-- com.test.sample.SampleTest -->
       <class name="com.test.sample.Sample2Test">
         <methods>
-          <include name="afterMethod"/>
-          <include name="testApp6"/>
-          <include name="testApp4"/>
           <include name="beforeMethod"/>
+          <include name="beforeClass"/>
+          <include name="afterMethod"/>
         </methods>
       </class> <!-- com.test.sample.Sample2Test -->
     </classes>

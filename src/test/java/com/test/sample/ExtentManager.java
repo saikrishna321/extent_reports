@@ -55,9 +55,9 @@ public class ExtentManager {
     }
 
     private static ExtentXReporter getExtentXReporter() {
-        String host = prop.getProperty("MONGODB_SERVER");
-        Integer port = Integer.parseInt(prop.getProperty("MONGODB_PORT"));
-        ExtentXReporter extentx = new ExtentXReporter(host, port);
+        //String host = prop.getProperty("MONGODB_SERVER");
+        //Integer port = Integer.parseInt(prop.getProperty("MONGODB_PORT"));
+        ExtentXReporter extentx = new ExtentXReporter("localhost", 27017);
 
         // project name
         String projectName = prop.getProperty("projectName", "ExtentReports");
@@ -77,7 +77,7 @@ public class ExtentManager {
         KlovReporter klov = new KlovReporter();
 
 // specify mongoDb connection
-        klov.initMongoDbConnection("10.234.1.112", 27017);
+        klov.initMongoDbConnection("localhost", 27017);
 
 // specify project
 // ! you must specify a project, other a "Default project will be used"
@@ -89,7 +89,7 @@ public class ExtentManager {
 // URL of the KLOV server
 // you must specify the served URL to ensure all your runtime media is uploaded
 // to the server
-        klov.setKlovUrl("http://10.234.1.112");
+        klov.setKlovUrl("http://localhost");
         return klov;
     }
 

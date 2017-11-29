@@ -1,17 +1,277 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="2" total="8" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="558" started-at="2016-01-10T07:40:23Z" finished-at="2016-01-10T07:40:23Z">
+  <suite name="Suite" duration-ms="1156" started-at="2017-11-29T06:02:28Z" finished-at="2017-11-29T06:02:29Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="558" started-at="2016-01-10T07:40:23Z" finished-at="2016-01-10T07:40:23Z">
-      <class name="com.test.sample.Runner">
-        <test-method status="PASS" signature="testReports()[pri:0, instance:com.test.sample.Runner@282ba1e]" name="testReports" duration-ms="548" started-at="2016-01-10T13:10:23Z" finished-at="2016-01-10T13:10:23Z">
+    <test name="Test" duration-ms="1156" started-at="2017-11-29T06:02:28Z" finished-at="2017-11-29T06:02:29Z">
+      <class name="com.test.sample.Sample2Test">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:[Sample2Test passed=0 failed=0 skipped=0]]" name="beforeClass" is-config="true" duration-ms="491" started-at="2017-11-29T11:32:28Z" finished-at="2017-11-29T11:32:29Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testReports -->
-      </class> <!-- com.test.sample.Runner -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:[Sample2Test passed=0 failed=0 skipped=0]]" name="beforeMethod" is-config="true" duration-ms="6" started-at="2017-11-29T11:32:29Z" finished-at="2017-11-29T11:32:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.test.sample.Sample2Test.testApp4()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testApp4()[pri:0, instance:[Sample2Test passed=0 failed=0 skipped=0]]" name="testApp4" duration-ms="1" started-at="2017-11-29T11:32:29Z" finished-at="2017-11-29T11:32:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApp4 -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:[Sample2Test passed=0 failed=0 skipped=0]]" name="afterMethod" is-config="true" duration-ms="440" started-at="2017-11-29T11:32:29Z" finished-at="2017-11-29T11:32:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testApp4 on [Sample2Test passed=0 failed=0 skipped=0] status=SUCCESS method=Sample2Test.testApp4()[pri:0, instance:[Sample2Test passed=0 failed=0 skipped=0]] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:[Sample2Test passed=0 failed=0 skipped=0]]" name="beforeMethod" is-config="true" duration-ms="2" started-at="2017-11-29T11:32:29Z" finished-at="2017-11-29T11:32:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.test.sample.Sample2Test.testApp5()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testApp5()[pri:0, instance:[Sample2Test passed=0 failed=0 skipped=0]]" name="testApp5" duration-ms="0" started-at="2017-11-29T11:32:29Z" finished-at="2017-11-29T11:32:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApp5 -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:[Sample2Test passed=0 failed=0 skipped=0]]" name="afterMethod" is-config="true" duration-ms="70" started-at="2017-11-29T11:32:29Z" finished-at="2017-11-29T11:32:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testApp5 on [Sample2Test passed=0 failed=0 skipped=0] status=SUCCESS method=Sample2Test.testApp5()[pri:0, instance:[Sample2Test passed=0 failed=0 skipped=0]] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:[Sample2Test passed=0 failed=0 skipped=0]]" name="beforeMethod" is-config="true" duration-ms="2" started-at="2017-11-29T11:32:29Z" finished-at="2017-11-29T11:32:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.test.sample.Sample2Test.testApp6()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testApp6()[pri:0, instance:[Sample2Test passed=0 failed=0 skipped=0]]" name="testApp6" duration-ms="0" started-at="2017-11-29T11:32:29Z" finished-at="2017-11-29T11:32:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApp6 -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:[Sample2Test passed=0 failed=0 skipped=0]]" name="afterMethod" is-config="true" duration-ms="77" started-at="2017-11-29T11:32:29Z" finished-at="2017-11-29T11:32:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testApp6 on [Sample2Test passed=0 failed=0 skipped=0] status=SUCCESS method=Sample2Test.testApp6()[pri:0, instance:[Sample2Test passed=0 failed=0 skipped=0]] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:[Sample2Test passed=0 failed=0 skipped=0]]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2017-11-29T11:32:29Z" finished-at="2017-11-29T11:32:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.test.sample.Sample2Test.testApp7()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testApp7()[pri:0, instance:[Sample2Test passed=0 failed=0 skipped=0]]" name="testApp7" duration-ms="1" started-at="2017-11-29T11:32:29Z" finished-at="2017-11-29T11:32:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApp7 -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:[Sample2Test passed=0 failed=0 skipped=0]]" name="afterMethod" is-config="true" duration-ms="58" started-at="2017-11-29T11:32:29Z" finished-at="2017-11-29T11:32:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testApp7 on [Sample2Test passed=0 failed=0 skipped=0] status=SUCCESS method=Sample2Test.testApp7()[pri:0, instance:[Sample2Test passed=0 failed=0 skipped=0]] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.test.sample.Sample2Test -->
+      <class name="com.test.sample.SampleTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:[SampleTest passed=0 failed=0 skipped=0]]" name="beforeClass" is-config="true" duration-ms="493" started-at="2017-11-29T11:32:28Z" finished-at="2017-11-29T11:32:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:[SampleTest passed=0 failed=0 skipped=0]]" name="beforeMethod" is-config="true" duration-ms="5" started-at="2017-11-29T11:32:29Z" finished-at="2017-11-29T11:32:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.test.sample.SampleTest.testApp()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="testApp()[pri:0, instance:[SampleTest passed=0 failed=0 skipped=0]]" name="testApp" duration-ms="2" started-at="2017-11-29T11:32:29Z" finished-at="2017-11-29T11:32:29Z">
+          <exception class="java.lang.AssertionError">
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 
+	at org.testng.AssertJUnit.fail(AssertJUnit.java:59)
+	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:24)
+	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:33)
+	at com.test.sample.SampleTest.testApp(SampleTest.java:14)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApp -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:[SampleTest passed=0 failed=0 skipped=0]]" name="afterMethod" is-config="true" duration-ms="397" started-at="2017-11-29T11:32:29Z" finished-at="2017-11-29T11:32:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testApp on [SampleTest passed=0 failed=0 skipped=0] status=FAILURE method=SampleTest.testApp()[pri:0, instance:[SampleTest passed=0 failed=0 skipped=0]] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:[SampleTest passed=0 failed=0 skipped=0]]" name="beforeMethod" is-config="true" duration-ms="41" started-at="2017-11-29T11:32:29Z" finished-at="2017-11-29T11:32:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.test.sample.SampleTest.testApp1()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:[SampleTest passed=0 failed=0 skipped=0]]" name="afterMethod" is-config="true" duration-ms="37" started-at="2017-11-29T11:32:29Z" finished-at="2017-11-29T11:32:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testApp1 on [SampleTest passed=0 failed=0 skipped=0] status=SUCCESS method=SampleTest.testApp1()[pri:0, instance:[SampleTest passed=0 failed=0 skipped=0]] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="testApp1()[pri:0, instance:[SampleTest passed=0 failed=0 skipped=0]]" name="testApp1" duration-ms="0" started-at="2017-11-29T11:32:29Z" finished-at="2017-11-29T11:32:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApp1 -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:[SampleTest passed=0 failed=0 skipped=0]]" name="beforeMethod" is-config="true" duration-ms="34" started-at="2017-11-29T11:32:29Z" finished-at="2017-11-29T11:32:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.test.sample.SampleTest.testApp2()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="testApp2()[pri:0, instance:[SampleTest passed=0 failed=0 skipped=0]]" name="testApp2" duration-ms="0" started-at="2017-11-29T11:32:29Z" finished-at="2017-11-29T11:32:29Z">
+          <exception class="java.lang.AssertionError">
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 
+	at org.testng.AssertJUnit.fail(AssertJUnit.java:59)
+	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:24)
+	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:33)
+	at com.test.sample.SampleTest.testApp2(SampleTest.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApp2 -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:[SampleTest passed=0 failed=0 skipped=0]]" name="afterMethod" is-config="true" duration-ms="39" started-at="2017-11-29T11:32:29Z" finished-at="2017-11-29T11:32:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testApp2 on [SampleTest passed=0 failed=0 skipped=0] status=FAILURE method=SampleTest.testApp2()[pri:0, instance:[SampleTest passed=0 failed=0 skipped=0]] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:[SampleTest passed=0 failed=0 skipped=0]]" name="beforeMethod" is-config="true" duration-ms="40" started-at="2017-11-29T11:32:29Z" finished-at="2017-11-29T11:32:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.test.sample.SampleTest.testApp3()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testApp3()[pri:0, instance:[SampleTest passed=0 failed=0 skipped=0]]" name="testApp3" duration-ms="0" started-at="2017-11-29T11:32:29Z" finished-at="2017-11-29T11:32:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApp3 -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:[SampleTest passed=0 failed=0 skipped=0]]" name="afterMethod" is-config="true" duration-ms="30" started-at="2017-11-29T11:32:29Z" finished-at="2017-11-29T11:32:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testApp3 on [SampleTest passed=0 failed=0 skipped=0] status=SUCCESS method=SampleTest.testApp3()[pri:0, instance:[SampleTest passed=0 failed=0 skipped=0]] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.test.sample.SampleTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
