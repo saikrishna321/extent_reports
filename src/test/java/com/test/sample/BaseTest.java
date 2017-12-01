@@ -1,5 +1,6 @@
 package com.test.sample;
 
+import java.io.IOException;
 import java.lang.reflect.Method;
 
 import com.aventstack.extentreports.ExtentTest;
@@ -20,6 +21,7 @@ public class BaseTest extends TestListenerAdapter {
 	public synchronized void beforeClass() throws Exception {
 		ExtentTest parent = ExtentTestManager.createTest(getClass().getName());
 		parentTest.set(parent);
+
 		//throw new Exception("Failed ******* ");
 	}
 
@@ -30,9 +32,11 @@ public class BaseTest extends TestListenerAdapter {
 	}
 
 	@AfterMethod
-	public synchronized void afterMethod(ITestResult result) {
-		if (result.getStatus() == ITestResult.FAILURE)
-			test.get().log(Status.FAIL,result.getThrowable());
+	public synchronized void afterMethod(ITestResult result) throws IOException {
+		if (result.getStatus() == ITestResult.FAILURE) {
+			test.get().log(Status.FAIL, result.getThrowable());
+			test.get().addScreenCaptureFromPath(System.getProperty("user.dir") + "/sample.jpeg");
+		}
 		else if (result.getStatus() == ITestResult.SKIP)
 			test.get().skip(result.getThrowable());
 		else

@@ -74,22 +74,14 @@ public class ExtentManager {
     }
 
     private static KlovReporter klovReporter() {
-        KlovReporter klov = new KlovReporter();
+        KlovReporter klov = new KlovReporter("sai","testing");
 
 // specify mongoDb connection
-        klov.initMongoDbConnection("localhost", 27017);
-
-// specify project
-// ! you must specify a project, other a "Default project will be used"
-        klov.setProjectName("Java");
-
-// you must specify a reportName otherwise a default timestamp will be used
-        klov.setReportName("AppBuild");
-
+        klov.initMongoDbConnection("localhost");
 // URL of the KLOV server
 // you must specify the served URL to ensure all your runtime media is uploaded
 // to the server
-        klov.setKlovUrl("http://localhost");
+        klov.setKlovUrl("http://localhost:1337");
         return klov;
     }
 
